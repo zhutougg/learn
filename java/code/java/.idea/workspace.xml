@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98f0ba95-c6cb-4348-9dfd-a375607047f7" name="Default" comment="" />
+    <list default="true" id="5151f76b-42c8-4201-9ea2-cee488d95292" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,27 +12,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyDynamicProxy.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jdk动态反射/MyDynamicProxy.java">
+      <file leaf-file-name="ReetranklockTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/reetranlock和condition/ReetranklockTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="362">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#251#252#0" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#564#716#0" expanded="true" />
+                <element signature="e#715#716#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#723#724#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Proxy.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/software/java/src.zip!/java/lang/reflect/Proxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="702" column="25" selection-start-line="702" selection-start-column="25" selection-end-line="702" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -49,7 +40,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/jdk动态反射/MyDynamicProxy.java" />
+        <option value="$PROJECT_DIR$/src/reetranlock和condition/ReetranklockTest.java" />
       </list>
     </option>
   </component>
@@ -80,16 +71,10 @@
           <expand>
             <path>
               <item name="java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="jdk动态反射" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -105,9 +90,6 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -122,16 +104,10 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="MyDynamicProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jdk动态反射.MyDynamicProxy" />
-      <module name="java" />
+    <configuration name="ReetranklockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReetranklockTest" />
+      <module name="code" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jdk动态反射.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -176,7 +152,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyDynamicProxy" />
+        <item itemvalue="Application.ReetranklockTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,17 +161,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="98f0ba95-c6cb-4348-9dfd-a375607047f7" name="Default" comment="" />
-      <created>1553764006087</created>
+      <changelist id="5151f76b-42c8-4201-9ea2-cee488d95292" name="Default" comment="" />
+      <created>1553916878552</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1553764006087</updated>
-      <workItem from="1553764012533" duration="1092000" />
+      <updated>1553916878552</updated>
+      <workItem from="1553916882743" duration="1241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1092000" />
+    <option name="totallyTimeSpent" value="1241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -210,8 +186,8 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32965517" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32965517" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
@@ -221,8 +197,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -238,23 +214,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/software/java/src.zip!/java/lang/reflect/Proxy.java">
+    <entry file="file://$PROJECT_DIR$/src/reetranlock和condition/ReetranklockTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="702" column="25" selection-start-line="702" selection-start-column="25" selection-end-line="702" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jdk动态反射/MyDynamicProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="362">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#564#716#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -262,80 +231,9 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>java</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
