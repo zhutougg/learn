@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/jdk动态反射" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/reetranlock和condition" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/java并发类" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/queue" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
