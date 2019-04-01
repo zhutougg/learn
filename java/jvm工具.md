@@ -5,6 +5,22 @@ jstat gc统计
 jmc
 jConsole
 
+
+Minor GC执行非常迅速（50ms以内）
+Minor GC没有频繁执行（大约10s执行一次）
+Full GC执行非常迅速（1s以内）
+Full GC没有频繁执行（大约10min执行一次）
+
+jstat -gcutil
+S0 S1 E O P YGC YGCT FGC FGCT GCT
+12.16 0.00 5.18 63.78 20.32 54 2.047 5 6.946 8.993
+
+jstat -gccapacity
+NGCMN NGCMX NGC S0C S1C EC OGCMN OGCMX OGC OC PGCMN PGCMX PGC PC YGC FGC
+212992.0 212992.0 212992.0 21248.0 21248.0 170496.0 1884160.0 1884160.0 1884160.0 1884160.0 262144.0 262144.0 262144.0 262144.0 54 5
+
+具体案例：https://crowhawk.github.io/2017/08/21/jvm_4/
+
 TLAB(thread local allocation buffer)
 jvm为每个线程分配一个私有缓存地址，避免多线程同时分配内存是，操作同一个地址，从而加锁
 
@@ -43,3 +59,35 @@ G1仍然存在年代的概念，内存不是条带式划分，而是类似棋盘
 
 jdk11 epsilionGC
 ZGC Zing Shenandoah
+
+
+gc调优
+内存占用 延迟  吞吐量
+
+
+G1
+e| |s|o|H
+ | |e| |E
+ 
+ 
+region大小是一致的，数值在1m-32m字节,jvm会尽量分2048个左右
+region大小和大对象很难一致，导致空间浪费,并且分配大对象难以找到连续的看空间
+直接设置较大的region大小
+-XX:G1HeapRegionSize=<N,例如 16>M
+
+rememenberd Set 用于记录和维护region之间对象的引用关系
+新生代复制算法，从eden/survivor 到其他区
+通常占heap大小的20%
+老年带到新生带需要引用
+GCRoots       a(老年带)->(rememenberd sets)           a.b(新生带)
+
+parNew和CMS stopTheWorld
+1.标记阶段,首先root标记，发生前检查young.触发minitorGC(GC log:GC pause(young)(inital-mark))
+2.并发标记非root,看是否存活。
+4.再标记,看并发非root中是否又有root变化
+
+
+
+
+
+
