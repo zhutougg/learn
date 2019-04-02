@@ -37,10 +37,32 @@ zookeeper
 注测创建节点。
 每个节点变化都会有事件，通知订阅的url消费
 
+集群容错  abstractClusterInvoker
+1.failover cluster  失败自动切换，出现失败重试其他服务器
+2.failfast cluster  快速失败，只发起一次调用，立即报错。等幂性写操作，新增记录
+3.failsafe cluster  失败安全，出现异常，直接忽略.
+4.failback cluster  失败定时重发.
+5.forking			  并行多个服务器，只要一个成功就返回
+6.broadcast		    广播所有调用者,任意一台报错就错。
 
-代理对象                invokeInvocationHandler										mockCluserInvoker
-sayHello("world")		toString, hashCode, equals直接调用invoke(为啥不用报错)
-						由调用的远程方法名和参数构建远程调用对象RPCInvocation
-						invoke
+
+
+代理对象                invokeInvocationHandler(jdk或者javassist调用方法)										mockCluserInvoker(是否mock->容错)
+sayHello("world")		toString, hashCode, equals直接调用invoke(为啥不用报错)									如果是mock->mock		
+						由调用的远程方法名和参数构建远程调用对象RPCInvocation									不需要mock， 直接调用FailoverClusterInvoker
+						invoke																					先调FailoverClusterInvoker，调用失败在mock
+
+
+负载均衡策略
+random 随机
+roundRobin  轮训
+leastActive 方法级别的抵用方法最少的服务
+consisterHash  一致性hash
+						
+						
+failoverClusterInvoker	 									执行invoker
+通过目录服务找到所有订阅服务提供者的invoker对象
+路由服务根据策略过滤选择调用的invoker
+通过负载均衡策略loadBalance来选择一个invoker
 
 
