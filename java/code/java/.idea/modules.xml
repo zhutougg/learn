@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/src/code.iml" filepath="$PROJECT_DIR$/src/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/kafka-spring-boot-example/kafka-example.iml" filepath="$PROJECT_DIR$/src/kafka-spring-boot-example/kafka-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/multicast.iml" filepath="$PROJECT_DIR$/src/multicast.iml" />
     </modules>
   </component>

@@ -97,6 +97,10 @@ set global slow_query_log = 1;
 
 
 
+window 修改密码
+mysqld -nt --skip-grant-tables
+管理启动
+update user set authentication_string = password('root')
 
 
 
