@@ -10,3 +10,4 @@
   丢弃某些commit
   git reset --hard gitlog hashcode
   
+测试merge1
