@@ -1,8 +1,8 @@
 1.git diff head head~1 (暂存区和head不同)
-
-	aaaaaaa
-  git diff b1 b2 -- 文件名 (比较aaaaaaa分支)
-
+xxxxxxx
+	aaaaaaaxxx
+  git diff b1 b2 -- 文件名 (比较xxxxx分支)
+xxxxx
 	bbbbbbbb
   git diff b1 b2 -- 文件名 (比较分支bbbbbbbb)
 
