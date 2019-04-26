@@ -32,6 +32,12 @@ https://www.tutorialspoint.com/apache_kafka/apache_kafka_installation_steps.htm
 
 window版本
 https://blog.csdn.net/u010283894/article/details/77106159
+官方命令
+https://kafka.apache.org/21/documentation.html#basic_ops
+group命令
+https://www.jianshu.com/p/58276dd6e0e8
+rest命令
+https://www.cnblogs.com/huxi2b/p/7284767.html
 
 安裝zookeeper
 修改config/zoo_example.cfg 改成zoo.cfg
@@ -40,7 +46,7 @@ https://blog.csdn.net/u010283894/article/details/77106159
 
 安装kafka(kafka_2.11-2.2.0)
 修改 server.properties   log.dirs=D:/software/kafka_2.11-0.9.0.0/kafka-logs
-启动 kafka-server-start.bat D:/software/kafka_2.11-0.9.0.0/config/server.properties
+启动 kafka-server-start.bat D:/software/kafka_2.11-2.2.0/config/server.properties
 
 创建
 kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1   
