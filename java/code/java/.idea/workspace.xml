@@ -65,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/kafka-spring-boot-example/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="178">
+              <first_editor relative-caret-position="-142">
                 <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
               </first_editor>
               <second_editor />
@@ -154,7 +154,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="291" />
     <option name="y" value="386" />
     <option name="width" value="1170" />
@@ -382,7 +382,7 @@
     <option name="totallyTimeSpent" value="53781000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -781,7 +781,7 @@
     <entry file="file://$PROJECT_DIR$/src/kafka-spring-boot-example/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="178">
+          <first_editor relative-caret-position="-142">
             <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
           </first_editor>
           <second_editor />
