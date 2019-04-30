@@ -1,5 +1,4 @@
-
-https://www.tutorialspoint.com/spring_boot/spring_boot_interceptor.htm
+https://www.tutorialspoint.com/spring_boot/spring_boot_zuul_proxy_server_and_routing.htm
 Externalized Properties
 -Dspring.config.location = C:\application.properties
 
@@ -145,3 +144,7 @@ public class ProductServiceInterceptor implements HandlerInterceptor {
 	  {
 	  }
 }
+
+端口
+server:port =0 随机
+server.port = 1000

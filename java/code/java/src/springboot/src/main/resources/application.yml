@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+eureka:
+   client:
+      registerWithEureka: false #注册到server
+      fetchRegistry: false #启动从server拉取数据到本地缓存
+
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
