@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @creat_user: hyson
  * @creat_date: 2019/4/30 18:00
  **/
-@FeignClient("COMPUTE-SERVICE")
+@FeignClient(name="eurekaprovider")
 public interface ComputeClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/add")

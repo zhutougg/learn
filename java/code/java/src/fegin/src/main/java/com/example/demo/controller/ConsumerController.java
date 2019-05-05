@@ -9,15 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @describe: TODO
  * @creat_user: hyson
- * @creat_date: 2019/4/30 18:03
+ * @creat_date: 2019/5/5 10:23
  **/
 @RestController
-public class ConsumerController implements ComputeClient {
+public class ConsumerController {
 
+    @Autowired
+    private ComputeClient computeClient;
 
-    @Override
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add(Integer a, Integer b) {
-        return 10 * 20;
+    public Integer add() {
+        return computeClient.add(10, 20);
     }
 }
