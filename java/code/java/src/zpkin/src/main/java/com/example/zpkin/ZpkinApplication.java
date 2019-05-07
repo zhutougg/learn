@@ -1,39 +1,39 @@
-package com.example.demo;
+package com.example.zpkin;
 
-import com.example.demo.rest.SayHiService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 @SpringBootApplication
 @RestController
-public class DemoApplication {
-    private static final Logger LOG = Logger.getLogger(DemoApplication.class.getName());
+public class ZpkinApplication {
+    private static final Logger LOG = Logger.getLogger(ZpkinApplication.class.getName());
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(ZpkinApplication.class, args);
     }
 
     @Autowired
-    SayHiService sayHiService;
+    ServiceA serviceA;
+    @Autowired
+    RestTemplate restTemplate;
 
-    @Value("${greeting}")
-    String welcomeText;
-
-    @RequestMapping(value="/test")
-    public String home(){
-        sayHiService.say();
-        return "Eureka Client application "+welcomeText;
-    }
     @RequestMapping("/")
-    public String index() {
+    public String index(){
         LOG.log(Level.INFO, "Index API is calling");
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://eurekaprovider/say","fdfdfd",String.class);
         return "Welcome Sleuth!";
     }
+
+
+
+
+
 }

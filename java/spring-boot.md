@@ -148,3 +148,19 @@ public class ProductServiceInterceptor implements HandlerInterceptor {
 端口
 server:port =0 随机
 server.port = 1000
+
+服务正常注册，最大可能会有120s滞后
+
+30(首次注册 init registe) + 30(readOnlyCacheMap)+30(client fetch interval)+30(ribbon)=120
+如果是在Spring Cloud环境下使用这些组件(Eureka, Ribbon)，不会有首次注册30秒延迟的问题，服务启动后会马上注册,所以从注册到发现，最多可能是90s。
+
+
+
+
+服务异常下线：最大可能会有270s滞后
+定时清理任务每eureka.server. evictionIntervalTimerInMs(默认60)执行一次清理任务
+每次清理任务会把90秒(3个心跳周期，eureka.instance.leaseExpirationDurationInSeconds)没收到心跳的踢除，但是根据官方的说法 ，因为代码实现的bug，这个时间其实是两倍，即180秒，也就是说如果一个客户端因为网络问题或者主机问题异常下线，可能会在180秒后才剔除
+读取端，因为readOnlyCacheMap以及客户端缓存的存在，可能会在30(readOnlyCacheMap)+30(client fetch interval)+30(ribbon)=90
+所以极端情况最终可能会是180+90=270
+
+

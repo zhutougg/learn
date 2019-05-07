@@ -6,6 +6,8 @@ server:
 
 
 spring:
+  application:
+    name: config
    boot:
     admin:
       client:

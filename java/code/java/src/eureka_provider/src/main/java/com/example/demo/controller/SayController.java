@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.netflix.discovery.DiscoveryManager;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,5 +22,10 @@ public class SayController {
     public String say(@RequestBody String name) {
         System.out.println("ribbon "+name);
         return name + " " + "13";
+    }
+
+    @RequestMapping(value = "/offline", method = RequestMethod.GET)
+    public void offLine(){
+        DiscoveryManager.getInstance().shutdownComponent();
     }
 }
