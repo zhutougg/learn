@@ -22,6 +22,7 @@ public class SayHiService {
     @Autowired
     private RestTemplate restTemplate;
 
+
     public void say()  {
         ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://eurekaprovider/say","fdfdfd",String.class);
         System.out.println(responseEntity.getBody());

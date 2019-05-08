@@ -23,6 +23,11 @@ public class SayController {
         System.out.println("ribbon "+name);
         return name + " " + "13";
     }
+    @RequestMapping(value = "/info")
+    public String info() {
+        return "13";
+    }
+
 
     @RequestMapping(value = "/offline", method = RequestMethod.GET)
     public void offLine(){
