@@ -1,4 +1,4 @@
-https://www.tutorialspoint.com/spring_boot/spring_boot_zuul_proxy_server_and_routing.htm
+https://www.tutorialspoint.com/spring_boot/
 Externalized Properties
 -Dspring.config.location = C:\application.properties
 

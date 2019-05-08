@@ -1,4 +1,4 @@
-# Spring Boot Kafka Example - The Practical Developer
+﻿# Spring Boot Kafka Example - The Practical Developer
 
 ## Basic configuration
 
@@ -29,7 +29,8 @@ https://thepracticaldeveloper.com/2018/11/24/spring-boot-kafka-config/
 
 
 https://www.tutorialspoint.com/apache_kafka/apache_kafka_installation_steps.htm
-
+kafka版本
+kafka_2.11-2.2.0
 window版本
 https://blog.csdn.net/u010283894/article/details/77106159
 官方命令
@@ -49,11 +50,12 @@ https://www.cnblogs.com/huxi2b/p/7284767.html
 启动 kafka-server-start.bat D:/software/kafka_2.11-2.2.0/config/server.properties
 
 创建
-kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1   
---partitions 1 --topic Hello-Kafka 
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1   --partitions 1 --topic Hello-Kafka 
 查看主题
 kafka-topics.bat --list --zookeeper localhost:2181
 模拟发消息
 kafka-console-producer.bat --broker-list localhost:9092 --topic Hello-Kafka
 消费消息
-kafka-console-consumer.bat --zookeeper localhost:9092 --topic Hello-Kafka --from-beginning
+kafka-console-consumer.bat --bootstrap-server=localhost:9092 --topic Hello-Kafka --from-beginning --consumer-property group.id=test-group1
+
+
