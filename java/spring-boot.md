@@ -164,3 +164,5 @@ server.port = 1000
 所以极端情况最终可能会是180+90=270
 
 
+hystrix
+https://howtodoinjava.com/spring-cloud/spring-hystrix-circuit-breaker-tutorial/
