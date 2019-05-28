@@ -166,3 +166,5 @@ server.port = 1000
 
 hystrix
 https://howtodoinjava.com/spring-cloud/spring-hystrix-circuit-breaker-tutorial/
+//设置线程数和队列大小
+https://juejin.im/post/5c4f18cb6fb9a049ff4e8524
