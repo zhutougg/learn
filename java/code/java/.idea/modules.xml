@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/src/code.iml" filepath="$PROJECT_DIR$/src/code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/kafka-spring-boot-example/kafka-example.iml" filepath="$PROJECT_DIR$/src/kafka-spring-boot-example/kafka-example.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/multicast.iml" filepath="$PROJECT_DIR$/src/multicast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/spring-hystrix-school-service/spring-hystrix-school-service.iml" filepath="$PROJECT_DIR$/src/spring-hystrix-school-service/spring-hystrix-school-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/spring-hystrix-student-service/spring-hystrix-student-service.iml" filepath="$PROJECT_DIR$/src/spring-hystrix-student-service/spring-hystrix-student-service.iml" />
     </modules>
   </component>
 </project>
