@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/src/spring-hystrix-school-service/spring-hystrix-school-service.iml" filepath="$PROJECT_DIR$/src/spring-hystrix-school-service/spring-hystrix-school-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/spring-hystrix-student-service/spring-hystrix-student-service.iml" filepath="$PROJECT_DIR$/src/spring-hystrix-student-service/spring-hystrix-student-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java.iml" filepath="$PROJECT_DIR$/java.iml" />
     </modules>
   </component>
 </project>
