@@ -109,3 +109,11 @@ defer 先进后出
  panic("")
  
 for _,stu := range stu地址一致问题
+
+
+
+
+安装
+export GOPATH=/url/local/go
+export PATH=$PATH:GOPATH/bin
+export GOPROXY=https://goproxy.io

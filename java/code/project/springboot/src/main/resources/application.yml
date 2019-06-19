@@ -1,0 +1,25 @@
+server:
+  port: 8761
+
+eureka:
+  server:
+    enable-self-preservation: true #中小规模下，自我保护模式坑比好处多，所以关闭它
+    eviction-interval-timer-in-ms: 5000 # 执行清理任务
+    response-cache-update-interval-ms: 3000 #但在大集群中建议还是开启，使用eureka.server.responseCacheUpdateInvervalMs=3000进行配置
+    #use-read-only-response-cache: false #中小集群可以直接关闭
+
+  client:
+    registerWithEureka: false #注册到server
+    fetchRegistry: false      #启动从server拉取数据到本地缓存
+  instance:
+    lease-expiration-duration-in-seconds: 60 #服务过期时间配置,超过这个时间没有接收到心跳EurekaServer就会将这个实例剔除
+    lease-renewal-interval-in-seconds: 10
+
+spring:
+  zipkin:
+    base-url: http://localhost:9411/
+  freemarker:
+    template-loader-path: classpath:/templates/
+    prefer-file-system-access: false
+
+
