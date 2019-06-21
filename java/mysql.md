@@ -108,10 +108,16 @@ GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'root';
 linux开启MySQL binlog日志
 show variables like '%log_bin%'
 
+
+
 server_id=1
 log_bin = D:\software\mysql-5.7.22-winx64\mysql-bin 
 binlog_format = ROW
 expire_logs_days = 30
+
+gtid-mode=ON
+enforce_gtid_consistency=1
+log-slave-updates=1
 
 systemctl/service restart mysqld
 
