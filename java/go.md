@@ -117,3 +117,61 @@ for _,stu := range stu地址一致问题
 export GOPATH=/url/local/go
 export PATH=$PATH:GOPATH/bin
 export GOPROXY=https://goproxy.io
+
+同时赋值
+go  a,b= b,a
+test
+TestXX(t *testing.T)
+OS.ARGS
+OS.EXIT
+
+go run 
+go build
+
+const(
+Monday = iota+1
+Tuesday
+)
+
+const(
+Open = 1<< iota
+Close
+)
+
+fallthrough关键字
+switch 1 {
+case 1:
+    fmt.Println("I will print")
+    fallthrough
+case 0:
+    fmt.Println("I will also print")
+}
+
+匿名函数
+fuc(arr*3int){
+	(*arr)[0]=7
+}(&x)
+
+一定要用 不用_
+import _ fmt
+
+nil 标志符用于表示interface、函数、maps、slices、channels、error、指针等的“零值”。如果你不指定变量的类型，编译器将无法编译你的代码
+
+const identifier [type] = value
+
+字面量:
+有个不太好，但是足以说明问题的解释，那就是 对象字面量就是引号引起来的部分，必须是等号右边的部分
+const int b = 10; //b为常量，10为字面量
+string str = “hello world！”; // str 为变量，hello world！为字面量
+
+
+if simplestmt; expression {
+    ... ...
+}
+
+{ // 隐式code block
+    simplestmt
+    if expression { // 显式的code block
+            ... ...
+    } 
+} 
