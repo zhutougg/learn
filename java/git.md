@@ -8,6 +8,7 @@ mvn clean compile install -Dmaven.test.skip=true -U -e
 
 git remote set-url origin http://taoxincheng:Tao111111@gitlab.ky-tech.com.cn/erp-coo/tos-basic.git
 
+git push --set-upstream origin http://taoxincheng:Tao111111@gitlab.ky-tech.com.cn/erp-coo/tos-basic.git
 
 切换分支
 git checkout -b dev origin/release/caigou_v1.0
@@ -15,3 +16,10 @@ git checkout -b 本地分支名 origin/远程分支名
 
 git push -u origin dev:release/caigou_v1.0
 git push <远程主机名> <本地分支名>:<远程分支名>
+
+
+1 git checkout -b 新分支名
+执行该指令后，会在本地创建一个新分支，该分支是从当前分支上检出的，所以所有文件内容都和当前分支一模一样，这是正常的。创建成功后，将自动切换至新分支上
+
+
+2 git push --set-upstream origin 分支名
