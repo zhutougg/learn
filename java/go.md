@@ -224,6 +224,8 @@ close
 
 make(T, n)       slice        T为切片类型，长度和容量都为n
 make(T, n, m)     slice        T为切片类型，长度为n，容量为m （n<=m ，否则错误）
+new() 用于值类型的内存分配，并且置为零值。 make() 只用于切片、字典以及通道这三种引用数据类型的内存分配和初始化。
+new(T) 分配类型 T 的零值并返回其地址，也就是指向类型 T 的指针。 make(T) 返回类型T的值（不是* T）
 
 make(T)          map        T为字典类型
 make(T, n)        map        T为字典类型，初始化n个元素的空间
@@ -323,3 +325,41 @@ func main() {
 
   M - p -G-G-G
   M - p -G-G-G
+  
+  var m sync.Map	
+	f := func(k, v interface{}) bool {
+		fmt.Println(k, v)
+		return true
+	}
+	m.Range(f)  
+	
+	
+var pointer *Point3D	
+符号 * 可以放在一个指针前，如 (*pointer)，那么它将得到这个指针指向地址上所存储的值，这称为反向引用。不过在Go语言中，(*pointer).x可以简写为pointer.x	
+
+
+如果想确切知道变量分配的位置，可在执行go build或go run时加上-m gc标志（即go run -gcflags -m app.go
+go run -gcflags -m main.go
+# command-line-arguments
+.\main.go:12:31: m.Alloc / 1024 escapes to heap
+.\main.go:11:23: main &m does not escape
+.\main.go:12:12: main ... argument does not escape
+
+
+其中a ...interface{}表示参数不定的意思。如果要根据不同的参数实现不同的功能，要在方法内检测传递的参数。
+func Println(a ...interface{}) (n int, err error) {
+	return Fprintln(os.Stdout, a...)
+}
+测试函数包括Test开头的单元测试函数和以Benchmark开头的基准测试函数两种，测试辅助代码是为测试函数服务的公共函数、初始化函数、测试数据等，而示例函数则是以Example开头的说明被测试函数用法的函数，而示例函数通常被保存在*_test.go文件中
+
+
+Type()返回的是静态类型，是interface{}
+而kind()返回的是具体类型,
+element 是type	
+
+
+https://github.com/ffhelicopter/Go42/blob/master/content/42_28_unsafe.md
+
+内核中的缓冲：无论进程是否提供缓冲，内核都是提供缓冲的，系统对磁盘的读写都会提供一个缓冲（内核高速缓冲），将数据写入到块缓冲进行排队，当块缓冲达到一定的量时，才把数据写入磁盘。
+
+进程中的缓冲：是指对输入输出流进行了改进，提供了一个流缓冲，当调用一个函数向磁盘写数据时，先把数据写入缓冲区，当达到某个条件，如流缓冲满了，或刷新流缓冲，这时候才会把数据一次送往内核提供的块缓冲中，再经块缓冲写入磁盘。
