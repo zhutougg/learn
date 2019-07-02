@@ -1,4 +1,4 @@
-git branch --set-upstream-to=origin/dev 
+﻿git branch --set-upstream-to=origin/dev 
 git push origin HEAD -u
 git push origin --delete
 git branch -d 
@@ -23,3 +23,9 @@ git push <远程主机名> <本地分支名>:<远程分支名>
 
 
 2 git push --set-upstream origin 分支名
+
+
+
+查看谁修改了东西
+git log --pretty=format:"%h - %an, %ar :%s"  --name-status --author=xx  --since="2008-10-01" --before="2008-11-01"
+git show hash filename
