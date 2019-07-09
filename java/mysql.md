@@ -98,8 +98,9 @@ set global slow_query_log = 1;
 
 
 window 修改密码
-mysqld -nt --skip-grant-tables
+mysqld -nt --skip-grant-tables或者 mysqld skip-grant-tables
 管理启动
+use mysql
 update user set authentication_string = password('root')
 
 
@@ -120,6 +121,10 @@ enforce_gtid_consistency=1
 log-slave-updates=1
 
 systemctl/service restart mysqld
+
+
+
+update user set password=password("123") where user="root"
 
 
 
