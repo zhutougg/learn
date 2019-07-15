@@ -7,7 +7,7 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///D://fun/learn/java/code/java/src/myconfig/src/main/resources/
+          search-locations: file:///D://fun//learn//java//code//project//myconfig//src//main//resources
         #git:
           #uri: https://github.com/o7planning/spring-cloud-config-git-repo-example.git
   profiles:
